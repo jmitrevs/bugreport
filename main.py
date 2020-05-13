@@ -5,6 +5,7 @@ Simple application to show problem in Windows
 
 from pathlib import Path
 from PySide2 import QtGui, QtQml, QtCore
+from style_rc import *
 
 QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
 app = QtGui.QGuiApplication()
