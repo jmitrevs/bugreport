@@ -11,7 +11,7 @@ ApplicationWindow {
 
     menuBar: MenuBar {
         Menu {
-            title: qsTr("&File")
+            title: "&File"
             Action {
                 text: qsTr("&Quit")
                 shortcut: StandardKey.Quit
