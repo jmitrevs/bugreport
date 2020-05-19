@@ -9,11 +9,18 @@ ApplicationWindow {
     height: 600
     title: qsTr("Windows Imagine test")
 
+    // to show that it's not just qsTr that has issues
+    // define my own "qsTr" that does nothing
+
+    function myQsTr(foo) {
+        return foo;
+    }
+
     menuBar: MenuBar {
         Menu {
-            title: "&File"
+            title: myQsTr("&File")
             Action {
-                text: qsTr("&Quit")
+                text: "&Quit"  // purposely don't use qsTr or myQsTr
                 shortcut: StandardKey.Quit
                 onTriggered: mainWindow.close()
             }
